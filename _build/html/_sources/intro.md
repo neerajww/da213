@@ -1,6 +1,9 @@
-# Welcome to your Jupyter Book
+# Python Programming
 
-This is a small sample book to give you a feel for how book content is
+This is a collection of material you will be covering in this course.
+The book is under construction. Please don't get annoyed of the nonsense text.
+
+small sample book to give you a feel for how book content is
 structured.
 
 :::{note}

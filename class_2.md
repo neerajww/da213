@@ -2,10 +2,10 @@
 
 Overview of the course, Class logistics, Demonstration of programming in python, and followed by an excercise on formatted printing, Reading strings, Application to DNA
 
-(section-label)=
+(section-label_3)=
 ## Lecture
 
 
-(section-label)=
+(section-label_4)=
 ## Excercise
-Here is a [reference to the intro](intro.md). Here is a reference to [](section-label).
+Here is a [reference to the intro](intro.md). Here is a reference to [](section-label_1).
