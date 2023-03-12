@@ -117,7 +117,7 @@ plt.show()
 # ## Exercise A
 # The COVID-19 pandemic is gradually fading. We will do some data visualization to help us understand the COVID-19 case count across the globe. For this we will use the data made available by the World Health Organization through the CSV file `WHO-COVID-19-global-data.csv`.
 # 
-# 1. Create a new python notebook.
+# 1. Create a new python notebook and name it as your_roll_number_class_7_assign_1.ipynb. You will submit this.
 # 2. Load the WHO-COVID-19-global-data.csv
 # 3. Make a line plot illustrating the global COVID-19 "new case count" as a function of "days since 2020-01-03 (YYYY-MM-DD)"
 # 4. On to the same plot overlay the COVID-19 "new case count" for India, US, and Brasil. Add a legend for each trace.
@@ -255,7 +255,7 @@ ax[1].set_facecolor((0.5, 0.5, 0.5)) # changing the color of the canvas
 plt.show()
 
 
-# Exercise C
+# ## Exercise C
 # 
 # * Use the data in `WHO-COVID-19-global-data.csv`
 # * Create dataframe containing three colums: country code (or name), cummulative covid case count, cummulative covid death count. Using this data frame:
@@ -338,11 +338,7 @@ ax.spines['top'].set_color('none') # turn top left spine
 plt.show()
 
 
-# ## Exercise E
+# ## Exercise D
 # Make a histogram of cummulative COVID-19 case using the new data frame you made. List your observations. Does it look Gaussian? Yes or no and explain why so?
-
-# In[ ]:
-
-
-
-
+# 
+# Let's move to the next section now.

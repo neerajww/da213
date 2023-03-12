@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3.1. Plotting with python &#8212; DA213:Programming with Python</title>
+    <title>1.1. Plotting with python &#8212; DA213:Programming with Python</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,8 +51,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="4. Markdown Files" href="markdown.html" />
-    <link rel="prev" title="3. Data Visualization" href="class_7_intro.html" />
+    <link rel="next" title="1.2. Plotting for Analysis" href="class_7_python_plotting_analysis.html" />
+    <link rel="prev" title="1. Data Visualization" href="class_7_intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -94,19 +94,9 @@
  </li>
 </ul>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="class_1.html">
-   1. Python - Why, What and How?
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="class_2.html">
-   2. Data types, Conditionals, and Loops
-  </a>
- </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="class_7_intro.html">
-   3. Data Visualization
+   1. Data Visualization
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -116,20 +106,15 @@
   <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     3.1. Plotting with python
+     1.1. Plotting with python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="class_7_python_plotting_analysis.html">
+     1.2. Plotting for Analysis
     </a>
    </li>
   </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="markdown.html">
-   4. Markdown Files
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="notebooks.html">
-   5. Content with notebooks
-  </a>
  </li>
 </ul>
 
@@ -237,37 +222,42 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#plotting-a-simple-line-graph">
-   3.1.1. Plotting a simple line graph
+   1.1.1. Plotting a simple line graph
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercise-a">
-   3.1.2. Exercise A
+   1.1.2. Exercise A
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#making-a-scatter-plot">
-   3.1.3. Making a scatter plot
+   1.1.3. Making a scatter plot
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercise-b">
-   3.1.4. Exercise B
+   1.1.4. Exercise B
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#making-a-bar-plot">
-   3.1.5. Making a bar plot
+   1.1.5. Making a bar plot
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-c">
+   1.1.6. Exercise C
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#making-histograms">
-   3.1.6. Making histograms
+   1.1.7. Making histograms
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-e">
-   3.1.7. Exercise E
+  <a class="reference internal nav-link" href="#exercise-d">
+   1.1.8. Exercise D
   </a>
  </li>
 </ul>
@@ -282,7 +272,7 @@
               <div>
                 
   <div class="section" id="plotting-with-python">
-<h1><span class="section-number">3.1. </span>Plotting with python<a class="headerlink" href="#plotting-with-python" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">1.1. </span>Plotting with python<a class="headerlink" href="#plotting-with-python" title="Permalink to this headline">¶</a></h1>
 <p>First, let’s install matplotlib python package into your machine. For this, go to the linux terminal and make use of pip as follows.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">matplotlib</span>
 </pre></div>
@@ -295,7 +285,7 @@
 </ul>
 <p>Next, follow along with the code snippets below.</p>
 <div class="section" id="plotting-a-simple-line-graph">
-<h2><span class="section-number">3.1.1. </span>Plotting a simple line graph<a class="headerlink" href="#plotting-a-simple-line-graph" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.1.1. </span>Plotting a simple line graph<a class="headerlink" href="#plotting-a-simple-line-graph" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -412,10 +402,10 @@
 </div>
 </div>
 <div class="section" id="exercise-a">
-<h2><span class="section-number">3.1.2. </span>Exercise A<a class="headerlink" href="#exercise-a" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.1.2. </span>Exercise A<a class="headerlink" href="#exercise-a" title="Permalink to this headline">¶</a></h2>
 <p>The COVID-19 pandemic is gradually fading. We will do some data visualization to help us understand the COVID-19 case count across the globe. For this we will use the data made available by the World Health Organization through the CSV file <code class="docutils literal notranslate"><span class="pre">WHO-COVID-19-global-data.csv</span></code>.</p>
 <ol class="simple">
-<li><p>Create a new python notebook.</p></li>
+<li><p>Create a new python notebook and name it as your_roll_number_class_7_assign_1.ipynb. You will submit this.</p></li>
 <li><p>Load the WHO-COVID-19-global-data.csv</p></li>
 <li><p>Make a line plot illustrating the global COVID-19 “new case count” as a function of “days since 2020-01-03 (YYYY-MM-DD)”</p></li>
 <li><p>On to the same plot overlay the COVID-19 “new case count” for India, US, and Brasil. Add a legend for each trace.</p></li>
@@ -424,7 +414,7 @@
 </ol>
 </div>
 <div class="section" id="making-a-scatter-plot">
-<h2><span class="section-number">3.1.3. </span>Making a scatter plot<a class="headerlink" href="#making-a-scatter-plot" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.1.3. </span>Making a scatter plot<a class="headerlink" href="#making-a-scatter-plot" title="Permalink to this headline">¶</a></h2>
 <p>In a line plot there is a relationship between consecutive data points. The data points form a sequence. For example, it can be a temporal sequence (like, the COVID-19 count as a function of time) or something else. Often we have scenarios in which there is no relationship between consecutive data points. Consider, you have a database of dogs documenting the <code class="docutils literal notranslate"><span class="pre">height</span></code> and <code class="docutils literal notranslate"><span class="pre">weight</span></code> of each dog. How will you establish if there exists a relationship between these two variables?</p>
 <ul class="simple">
 <li><p>To begin, you can make a scatter plot between <code class="docutils literal notranslate"><span class="pre">height</span></code> and <code class="docutils literal notranslate"><span class="pre">weight</span></code></p></li>
@@ -488,7 +478,7 @@
 </div>
 </div>
 <div class="section" id="exercise-b">
-<h2><span class="section-number">3.1.4. </span>Exercise B<a class="headerlink" href="#exercise-b" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.1.4. </span>Exercise B<a class="headerlink" href="#exercise-b" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Use the data in <code class="docutils literal notranslate"><span class="pre">WHO-COVID-19-global-data.csv</span></code> and create a scatter plot of daily COVID-19 new case count between India and Brasil. List your observations.</p></li>
 <li><p>Draw a scatter plot between global <code class="docutils literal notranslate"><span class="pre">New_cases</span></code> and <code class="docutils literal notranslate"><span class="pre">Cummulative_deaths</span></code>.</p>
@@ -500,7 +490,7 @@
 </ul>
 </div>
 <div class="section" id="making-a-bar-plot">
-<h2><span class="section-number">3.1.5. </span>Making a bar plot<a class="headerlink" href="#making-a-bar-plot" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.1.5. </span>Making a bar plot<a class="headerlink" href="#making-a-bar-plot" title="Permalink to this headline">¶</a></h2>
 <p>Often you wish to present a quick summary about different conditions. For example, what is the mean (or average) for data derived from experiment A and data derived from experiment B. The bar plot utility comes handy in such scenarios.</p>
 <ul class="simple">
 <li><p>Can we do a bar plot in python? Yes! We use <code class="docutils literal notranslate"><span class="pre">bar()</span></code> instead of <code class="docutils literal notranslate"><span class="pre">scatter()</span></code> and <code class="docutils literal notranslate"><span class="pre">plot()</span></code>.</p></li>
@@ -576,7 +566,9 @@
 <img alt="_images/class_7_python_plotting_basics_19_0.png" src="_images/class_7_python_plotting_basics_19_0.png" />
 </div>
 </div>
-<p>Exercise C</p>
+</div>
+<div class="section" id="exercise-c">
+<h2><span class="section-number">1.1.6. </span>Exercise C<a class="headerlink" href="#exercise-c" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Use the data in <code class="docutils literal notranslate"><span class="pre">WHO-COVID-19-global-data.csv</span></code></p></li>
 <li><p>Create dataframe containing three colums: country code (or name), cummulative covid case count, cummulative covid death count. Using this data frame:</p>
@@ -639,7 +631,7 @@
 </div>
 </div>
 <div class="section" id="making-histograms">
-<h2><span class="section-number">3.1.6. </span>Making histograms<a class="headerlink" href="#making-histograms" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.1.7. </span>Making histograms<a class="headerlink" href="#making-histograms" title="Permalink to this headline">¶</a></h2>
 <p>Histograms help to plot the distribution of data. Like other things, it easy to plot these in python.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -669,9 +661,10 @@
 </div>
 </div>
 </div>
-<div class="section" id="exercise-e">
-<h2><span class="section-number">3.1.7. </span>Exercise E<a class="headerlink" href="#exercise-e" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="exercise-d">
+<h2><span class="section-number">1.1.8. </span>Exercise D<a class="headerlink" href="#exercise-d" title="Permalink to this headline">¶</a></h2>
 <p>Make a histogram of cummulative COVID-19 case using the new data frame you made. List your observations. Does it look Gaussian? Yes or no and explain why so?</p>
+<p>Let’s move to the next section now.</p>
 </div>
 </div>
 
@@ -709,15 +702,15 @@
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title"><span class="section-number">3. </span>Data Visualization</p>
+                <p class="prevnext-title"><span class="section-number">1. </span>Data Visualization</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="markdown.html" title="next page">
+        <a class="right-next" href="class_7_python_plotting_analysis.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span class="section-number">4. </span>Markdown Files</p>
+                <p class="prevnext-title"><span class="section-number">1.2. </span>Plotting for Analysis</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>
