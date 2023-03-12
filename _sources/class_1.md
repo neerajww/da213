@@ -1,4 +1,4 @@
-# C1: Python - Why, What and How?
+# Python - Why, What and How?
 
 Overview of the course, Class logistics, Demonstration of programming in python, and followed by an excercise on formatted printing, Reading strings, Application to DNA
 

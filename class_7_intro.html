@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Here’s my sample title &#8212; DA213:Programming with Python</title>
+    <title>3. Data Visualization &#8212; DA213:Programming with Python</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,6 +51,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="3.1. Plotting with python" href="class_7_python_plotting_basics.html" />
+    <link rel="prev" title="2. Data types, Conditionals, and Loops" href="class_2.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -91,7 +93,7 @@
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="class_1.html">
    1. Python - Why, What and How?
@@ -102,11 +104,11 @@
    2. Data types, Conditionals, and Loops
   </a>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="class_7_intro.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
    3. Data Visualization
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
@@ -170,7 +172,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/my_markdown.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/class_7_intro.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -190,7 +192,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fmy_markdown.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fclass_7_intro.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -211,19 +213,6 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#here-s-my-first-section">
-   Here’s my first section
-  </a>
- </li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -232,12 +221,32 @@
         
               <div>
                 
-  <div class="section" id="here-s-my-sample-title">
-<h1>Here’s my sample title<a class="headerlink" href="#here-s-my-sample-title" title="Permalink to this headline">¶</a></h1>
-<p>Hi! This is some sample text.</p>
-<div class="section" id="here-s-my-first-section">
-<span id="section-label"></span><h2>Here’s my first section<a class="headerlink" href="#here-s-my-first-section" title="Permalink to this headline">¶</a></h2>
-<p>Here is a <a class="reference internal" href="intro.html"><span class="doc std std-doc">reference to the intro</span></a>. Here is a reference to <a class="reference internal" href="#section-label"><span class="std std-ref">Here’s my first section</span></a>.</p>
+  <div class="section" id="data-visualization">
+<h1><span class="section-number">3. </span>Data Visualization<a class="headerlink" href="#data-visualization" title="Permalink to this headline">¶</a></h1>
+<p><strong>Good things first</strong>:
+The Python community is extremely generous. People of this community every now and then create useful classes and functions, and document them as code modules. This documentation is also very neat as python codes are written not only for machines but also for humans. Sometimes a community (group of like minded individuals) create and pool multiple modules and form a package. The best thing is that many of these packages are released as open-access, enabling anyone to use it for free.</p>
+<p>Some such popular packages are numpy, pandas, and scipy. A list is maintained <a class="reference external" href="https://pypi.org/">here</a>. You can install these packages into your local python directory using the pip command from your linux/windows terminal. Many python packages are also popular in the scientific community. Example, check <a class="reference external" href="https://www.nature.com/articles/s41586-020-2649-2">this one</a> for numpy and <a class="reference external" href="https://www.nature.com/articles/s41592-019-0686-2">this one</a> for scipy. We think, it is a good idea to aim for creating one or more packages and present them as return gift to the python community.
+Okay, now we bring focus to today’s class.</p>
+<p>Today’s class we will learn about using a python package named matplotlib. As the name suggests, the package helps to make plots in python. Quoting from its <a class="reference external" href="https://matplotlib.org/">description</a> - “Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python. Matplotlib makes easy things easy and hard things possible”.</p>
+<p><strong>What is data visualization?</strong>
+Data visualization refers to drawing graphic displays to show data. This includes plotting a sequence of data points to visualize a trend (example, a line plot), plotting one sequence of data points against another (example, a scatter plot), plotting statistical summaries of the data points (example, a bar plot, a  histogram). The data can be ``raw data’’ or data obtained from applying some data science techniques on the raw data. As with many things in life, it becomes easier to create and appreciate graphics once we are aware of some basic concepts and terminologies.</p>
+<p><strong>What purpose does it serve in Data Science?</strong>
+Data cleaning, detecting outliers and unusual groups, identifying trends, clusters and patterns, evaluating and interpreting results are some things facilitated by data visualization. Often, the importance of data visualization is underplayed in textbooks, yet is very important in practical investigations.</p>
+<p><strong>Is it an old subject?</strong>
+Yes, we do know some amazing artists from the past who have created beautiful visualizations (and structures - pyramids). Plotting would have served a useful purpose a long long time back as well. But something interesting is happening in current times.</p>
+<p><strong>What’s new now?</strong>
+Thanks to the increasing access to useful data and design of higher-level computer programming languages, it is becoming easier to draw and redraw graphics. What used to be a slow and wearisome process - for instance imagine making a plot using C programming, has now become fast and flexible. Further, enhanced printing and visualization technology, and social media has also increased the consumption of created data visualizations. You may like to take a quick glance over two interesting visualizations: <a class="reference external" href="https://runrepeat.com/state-of-running">State of running in the world</a> and <a class="reference external" href="https://pudding.cool/2018/10/city_3d/">Population density in the world</a>. An inspiring article on importance of data visualization is available <a class="reference external" href="https://hdsr.mitpress.mit.edu/pub/zok97i7p/release/4">here</a>.</p>
+<p><strong>What we will learn today?</strong>
+By the end of today’s exercise you will have answers for the following.</p>
+<ul class="simple">
+<li><p>What are the different kind of plots</p></li>
+<li><p>What are the different features in a given plot</p></li>
+<li><p>What kind of plot can provide what kind of information</p></li>
+<li><p>How to choose colors and sizes which help interpret and draw attention</p></li>
+<li><p>How to do all the above python</p></li>
+</ul>
+<p>So, let’s begin.</p>
+<div class="toctree-wrapper compound">
 </div>
 </div>
 
@@ -270,6 +279,24 @@
 
 <div class='prev-next-bottom'>
     
+    <div id="prev">
+        <a class="left-prev" href="class_2.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title"><span class="section-number">2. </span>Data types, Conditionals, and Loops</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="class_7_python_plotting_basics.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title"><span class="section-number">3.1. </span>Plotting with python</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
 
 </div>
         
