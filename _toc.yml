@@ -3,8 +3,13 @@
 
 format: jb-book
 root: intro
+options:
+  numbered: true
 chapters:
 - file: class_1
 - file: class_2
+- file: class_7_intro
+  sections:
+  - file: class_7_python_plotting_basics
 - file: markdown
 - file: notebooks
