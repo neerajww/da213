@@ -40,7 +40,6 @@ A violin plot consists of a set of vertical "violins", one for each category or 
 <br>
 We can also show the mean, median and extremums of the data over a violin plot.
 <br>
+![violinplot](./box_violin.png)
+<br>
 Figure [reference](http://yufree.github.io/blog/2013/08/15/boxplot-vs-violinplot.html)
-
-### Additional libraries for data visualization
-There are several Python libraries for data visualization. The most popular Python library is Matplotlib that can be used to create common types of plots and graphs in Python. Two other popular libraries are Plotly and Seaborn. Plotlyis used for creating interactive visualizations that can be embedded in web applications. Seabornis built on top of Matplotlib and provides more advanced features for creating complex visualizations. To start, you can use Matlplotlib for this task.

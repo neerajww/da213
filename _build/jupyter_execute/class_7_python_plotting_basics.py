@@ -262,12 +262,44 @@ plt.show()
 #     * Make a scatter plot of cummulative covid case count, cummulative covid death count. List your observations.
 #     * Make a bar plot illustrating the cummulative case count for top five countries. List your observations.
 # 
-# Exercise D
-# 
-# You can also overlay datapoints onto a world map - easily. Use the below code and fill the missing piece to illustrate this.
 # 
 
+# ## Making histograms
+# Histograms help to plot the distribution of data. Like other things, it easy to plot these in python.
+
 # In[9]:
+
+
+fig, ax = plt.subplots(nrows=1, ncols=1, figsize=[16,8]) #[len, width] of the frame in inches
+
+FS = 14 # fontsize
+LW = 2 # linewidth
+MS = 100 # markersize
+BW = .5 # barwidth
+# compute the normalized standard deviation for data from each experiment
+
+ax.hist(y_A, bins=100, label='Experiment A')
+ax.hist(y_B, bins=100, label='Experiment B', alpha=.5)
+ax.set_xlabel('Samples values', fontsize=FS)
+ax.set_ylabel('Count', fontsize=FS)
+ax.legend(frameon=False, loc='upper right', fontsize=FS)
+ax.grid(color='black', linestyle='--', linewidth=.3,alpha=.5)
+ax.tick_params(which='both', labelsize=FS) # increase fontsize of xtick and ytick
+ax.spines['right'].set_color('none') # turn off right spine
+ax.spines['top'].set_color('none') # turn top left spine
+plt.show()
+
+
+# ## Exercise D
+# Make a histogram of cummulative COVID-19 case using the new data frame you made. List your observations. Does it look Gaussian? Yes or no and explain why so?
+# 
+# Let's move to the next section now.
+
+# ## (Bonus) Exercise E
+# 
+# You can also overlay datapoints onto a world map - easily. Use the below code and fill the missing piece to illustrate this.
+
+# In[10]:
 
 
 from geopy.geocoders import Nominatim
@@ -311,34 +343,3 @@ m.drawcoastlines(linewidth=0.1, color="white")
 # )
 plt.show()
 
-
-# ## Making histograms
-# Histograms help to plot the distribution of data. Like other things, it easy to plot these in python.
-
-# In[10]:
-
-
-fig, ax = plt.subplots(nrows=1, ncols=1, figsize=[16,8]) #[len, width] of the frame in inches
-
-FS = 14 # fontsize
-LW = 2 # linewidth
-MS = 100 # markersize
-BW = .5 # barwidth
-# compute the normalized standard deviation for data from each experiment
-
-ax.hist(y_A, bins=100, label='Experiment A')
-ax.hist(y_B, bins=100, label='Experiment B', alpha=.5)
-ax.set_xlabel('Samples values', fontsize=FS)
-ax.set_ylabel('Count', fontsize=FS)
-ax.legend(frameon=False, loc='upper right', fontsize=FS)
-ax.grid(color='black', linestyle='--', linewidth=.3,alpha=.5)
-ax.tick_params(which='both', labelsize=FS) # increase fontsize of xtick and ytick
-ax.spines['right'].set_color('none') # turn off right spine
-ax.spines['top'].set_color('none') # turn top left spine
-plt.show()
-
-
-# ## Exercise D
-# Make a histogram of cummulative COVID-19 case using the new data frame you made. List your observations. Does it look Gaussian? Yes or no and explain why so?
-# 
-# Let's move to the next section now.
